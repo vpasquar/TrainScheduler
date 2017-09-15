@@ -1,0 +1,37 @@
+html,body {
+	background-image: url("../images/background5.jpg");
+
+}
+
+
+.jumbotron {
+    background-image: url("../images/background4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    color:white;
+	transition: all 1.5s;
+}
+
+.jumbotron:hover {
+    background-image:none;
+    background-color:black;
+}
+
+.panel-heading {
+	background-image: url("../images/background4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    color:white;
+    transition:all 1s;
+}
+
+.panel-heading:hover {
+	background-image:none;
+	background-color:black;
+}
+
+.panel-title {
+	color:white;
+}

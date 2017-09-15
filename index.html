@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vincent Pasquarelli || Train Scheduler</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1><span class="glyphicon glyphicon-list-alt"></span> Train Scheduler</h1>
+      <p> "I like trains, I like their rhythm, and I like the freedom of being suspended between two places, all anxieties taken care of: for this moment I know where I am going." </p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <div class="panel panel-default">
+       <div class="panel-heading danger">
+          <h3 class="panel-title">Current Trains</h3>
+        </div>
+          <table class="table">
+           <thead class="thead-inverse">
+             <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency(min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+                
+             </tr>
+            </thead>
+            <tbody id="t-body">
+              
+            </tbody>
+           </table>
+       
+     </div>     
+  </div>
+
+
+  <div class="container">
+     <div class="panel panel-default">
+       <div class="panel-heading danger">
+         <h3 class="panel-title"> Add Train</h3>
+       </div>
+       <div class="panel-body">
+         <form>
+              <div class="form-group">
+                 <label> Train Name</label>
+                 <input type="text" class="form-control form-query" id="input-train" placeholder="train name" name="train">
+              </div>
+              <div class="form-group">
+                <label>Destination</label>
+                <input type="text" class="form-control" id="input-dest" placeholder="destination">  
+              </div>
+              <div class="form-group">
+                <label>First Train Time (HH:mm - military)</label>
+                <input type="text" class="form-control" id="input-firstTrain" placeholder="First train arrival">
+              </div>
+              <div class="form-group">
+                <label>Frequency (mins)</label>
+                <input type="text" class="form-control" id="input-freq" placeholder="How often does the train come?">  
+              </div>
+              <button type="submit" class="btn btn-default active buttons" id="submit"><span class="glyphicon glyphicon-search"></span> Submit</button>
+         </form>
+      </div>
+    </div>
+  </div>
+
+
+
+ <script type ="text/javascript" src="./assets/js/scheduler.js">  </script>
+ <script src="./assets/js/moment.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
+</html>
